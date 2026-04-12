@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons (Lucide alternative: Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    
+    <!-- Logo -->
+    <a href="#home" class="logo">
+      Parigyan <span>Yogalaya</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#videos">Videos</a>
+      <a href="#contact">Contact</a>
+
+      <a href="tel:+918329512488" class="call-btn">
+        <i class="fa fa-phone"></i> +91 8329512488
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i id="menuIcon" class="fa fa-bars"></i>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#why-us" onclick="closeMenu()">Why Us</a>
+    <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+    <a href="#videos" onclick="closeMenu()">Videos</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+
+    <a href="tel:+918329512488" class="call-btn">
+      <i class="fa fa-phone"></i> +91 8329512488
+    </a>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+
+  <!-- Background Image -->
+  <img src="hero-yoga.jpg" alt="Yoga practice" class="hero-img">
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <p class="tagline">✦ Unleash Your Yogic Potential Within ✦</p>
+
+    <h1>
+      Welcome to <br>
+      <span>Parigyan Yogalaya</span>
+    </h1>
+
+    <p class="desc">
+      Where we don't just teach yoga — we teach life. A little each day, making you better than yesterday.
+    </p>
+
+    <div class="buttons">
+      <a href="#services" class="btn primary">Explore Our Programs</a>
+      <a href="#about" class="btn secondary">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+  </div>
+
+</section>
+
+<section id="about" class="about-section">
+
+  <div class="about-container">
+
+    <!-- Image -->
+    <div class="about-image">
+      <img src="about-yoga.jpg" alt="About Parigyan Yogalaya">
+    </div>
+
+    <!-- Content -->
+    <div class="about-content">
+      <p class="about-tag">About Us</p>
+
+      <h2>A Journey of Wisdom & Wellness</h2>
+
+      <p class="about-text">
+        Parigyan Yogalaya, founded by <strong>Neha Pradeep Sangodkar</strong>, is dedicated to spreading the ancient wisdom of yoga through modern, accessible teaching. We believe in holistic well-being — body, mind, and spirit.
+      </p>
+
+      <p class="about-text">
+        Our approach blends traditional yogic philosophy with practical wellness, empowering students to lead healthier, more balanced lives.
+      </p>
+
+      <!-- Stats -->
+      <div class="stats">
+
+        <div>
+          <h3>5,000+</h3>
+          <p>Students Trained</p>
+        </div>
+
+        <div>
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+
+        <div>
+          <h3>15+</h3>
+          <p>Courses Offered</p>
+        </div>
+
+        <div>
+          <h3>5.6K+</h3>
+          <p>YouTube Subscribers</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="services" class="services-section">
+
+  <div class="services-container">
+    
+    <p class="services-tag">Our Services</p>
+    <h2>Programs We Offer</h2>
+
+    <p class="services-desc">
+      From traditional yoga to modern wellness, we offer a wide range of programs tailored to every age and experience level.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hatha Yoga</h3>
+        <p>Traditional yoga postures and breathing techniques for physical and mental balance.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-brain"></i>
+        <h3>Meditation & Pranayama</h3>
+        <p>Deep breathing and mindfulness practices for inner peace and clarity of thought.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Upanishad Studies</h3>
+        <p>Learn ancient Indian philosophy and sacred texts to deepen your yogic understanding.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Kids & Family Yoga</h3>
+        <p>Fun, engaging yoga sessions designed for children and families to practice together.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Yoga Therapy</h3>
+        <p>Personalized therapeutic yoga for managing chronic conditions, stress, and recovery.</p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>Online Yoga Classes</h3>
+        <p>Join live sessions from anywhere in the world via our YouTube channel and online programs.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="why-us" class="why-section">
+
+  <div class="why-container">
+
+    <p class="why-tag">Why Choose Us</p>
+    <h2>The Parigyan Difference</h2>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <i class="fa-solid fa-award"></i>
+        <h3>Certified & Experienced</h3>
+        <p>Our instructors hold recognized yoga certifications with 10+ years of teaching experience.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Flexible Scheduling</h3>
+        <p>Morning, evening, and weekend batches to fit your lifestyle. Online and offline options available.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fa-solid fa-laptop"></i>
+        <h3>Online & Offline Classes</h3>
+        <p>Learn from the comfort of your home or join our in-person sessions in a serene environment.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Holistic Approach</h3>
+        <p>We integrate asanas, pranayama, meditation, and philosophy for complete well-being.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="testimonials" class="testimonials-section">
+
+  <div class="testimonials-container">
+
+    <p class="test-tag">Testimonials</p>
+    <h2>What Our Students Say</h2>
+
+    <div class="test-grid">
+
+      <div class="test-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p class="test-text">
+          "Parigyan Yogalaya changed my life. The personalized attention and deep knowledge of yoga philosophy sets them apart from any other yoga school."
+        </p>
+        <h4>Priya Sharma</h4>
+        <span>Yoga Student</span>
+      </div>
+
+      <div class="test-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p class="test-text">
+          "The online classes are incredibly well-structured. Neha ma'am explains every asana with such clarity and care. Highly recommended!"
+        </p>
+        <h4>Rajesh Kulkarni</h4>
+        <span>Online Student</span>
+      </div>
+
+      <div class="test-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p class="test-text">
+          "After struggling with back pain for years, yoga therapy at Parigyan has given me immense relief. The holistic approach truly works wonders."
+        </p>
+        <h4>Anita Desai</h4>
+        <span>Yoga Therapy Client</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="videos" class="youtube-section">
+
+  <div class="youtube-container">
+
+    <p class="yt-tag">Watch & Learn</p>
+    <h2>Our YouTube Channel</h2>
+
+    <p class="yt-desc">
+      Join 5,600+ subscribers learning yoga, pranayama, and Indian philosophy through our free video content.
+    </p>
+
+    <!-- Video -->
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/sgq0gl99Yk8"
+        title="Parigyan Yogalaya"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Button -->
+    <a 
+      href="https://www.youtube.com/@ParigyanyogalayaNehapradeepSangodkar" 
+      target="_blank" 
+      class="yt-btn">
+      Subscribe on YouTube
+    </a>
+
+  </div>
+
+</section>
+
+<section class="cta-section">
+
+  <div class="cta-container">
+
+    <h2>Begin Your Yoga Journey Today</h2>
+
+    <p>
+      Book your first class or schedule a free consultation. Take the first step towards a healthier, happier you.
+    </p>
+
+    <a href="tel:+918329512488" class="cta-btn">
+      Book Appointment
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer id="contact" class="footer">
+
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>
+        Parigyan <span>Yogalaya</span>
+      </h3>
+      <p>
+        Spreading the ancient wisdom of yoga through modern, accessible teaching for holistic well-being.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+
+      <div class="footer-item">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <p class="title">Phone</p>
+          <a href="tel:+918329512488">+91 8329512488</a>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <p class="title">Email</p>
+          <a href="mailto:info@parigyanyogalaya.com">info@parigyanyogalaya.com</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+
+      <div class="footer-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <p class="title">Location</p>
+          <p>Goa, India</p>
+        </div>
+      </div>
+
+      <div class="footer-item">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <p class="title">Timings</p>
+          <p>Mon–Sat: 6 AM – 8 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p id="year"></p>
+  </div>
+
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
