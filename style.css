@@ -546,6 +546,7 @@ body {
   background: #111;
   color: #fff;
   text-align: center;
+  border-bottom: 2px solid #aaa;
 }
 
 .cta-container {
@@ -623,7 +624,8 @@ body {
 
 .footer-item i {
   color: goldenrod;
-  margin-top: 3px;
+  align-self:flex-start;
+  padding-top: 17px;
 }
 
 .footer-item .title {
@@ -758,5 +760,8 @@ body {
 
   .mobile-menu.show {
     display: flex;
+  }
+  .youtube-section{
+    margin-bottom: 250px;
   }
 }

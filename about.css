@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo span {
+  color: goldenrod;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: goldenrod;
+}
+
+.call-btn {
+  background: goldenrod;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white !important;
+}
+
+/* Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.mobile-menu a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: #555;
+}
+
+/* ABOUT HERO */
+.about-hero {
+  margin-top: 60px;
+  padding: 100px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+}
+
+.about-hero p {
+  color: #ccc;
+}
+
+/* ABOUT MAIN */
+.about-main {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* MISSION */
+.mission {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 32px;
+}
+
+/* TEAM */
+.team {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.team-card {
+  max-width: 300px;
+  margin: auto;
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.team-card h3 {
+  margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ========================= */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .mission h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
