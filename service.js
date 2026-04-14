@@ -54,3 +54,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 }
+
+document.getElementById("year").innerText =
+  "© " + new Date().getFullYear() + " Parigyan Yogalaya. All rights reserved.";

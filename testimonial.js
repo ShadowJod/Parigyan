@@ -1,68 +1,70 @@
-// Mobile menu
-const toggle = document.getElementById("menuToggle");
-const menu = document.getElementById("mobileMenu");
+document.addEventListener("DOMContentLoaded", () => {
 
-toggle.addEventListener("click", () => {
-  menu.classList.toggle("show");
-});
+  /* ==========================
+     📱 Mobile Menu (SAFE)
+  ========================== */
+  const menu = document.getElementById("mobileMenu");
+  const icon = document.getElementById("menuIcon");
 
-// Scroll animation
-const reveals = document.querySelectorAll(".reveal");
+  window.toggleMenu = function () {
+    if (!menu || !icon) return;
 
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    const screen = window.innerHeight;
+    menu.classList.toggle("show");
 
-    if (top < screen - 100) {
-      el.classList.add("active");
+    if (menu.classList.contains("show")) {
+      icon.classList.replace("fa-bars", "fa-times");
+    } else {
+      icon.classList.replace("fa-times", "fa-bars");
     }
-  });
-});
+  };
 
-// Slider
-let index = 0;
-const slides = document.querySelectorAll(".slide");
+  window.closeMenu = function () {
+    if (!menu || !icon) return;
 
-function showSlide() {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[index].classList.add("active");
+    menu.classList.remove("show");
+    icon.classList.replace("fa-times", "fa-bars");
+  };
 
-  index = (index + 1) % slides.length;
-}
 
-setInterval(showSlide, 3000);
+  /* ==========================
+     🎬 Scroll Animation
+  ========================== */
+  const reveals = document.querySelectorAll(".reveal");
 
-function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const icon = document.getElementById("menuIcon");
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const screen = window.innerHeight;
 
-  menu.classList.toggle("show");
-
-  if (menu.classList.contains("show")) {
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-times");
-  } else {
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
-  }
-}
-
-function closeMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const icon = document.getElementById("menuIcon");
-
-  menu.classList.remove("show");
-  icon.classList.remove("fa-times");
-  icon.classList.add("fa-bars");
-
-  // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+      if (top < screen - 100) {
+        el.classList.add("active");
+      }
     });
-  });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // page load pe bhi run
+
+
+  /* ==========================
+     🎞️ Slider
+  ========================== */
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  function showSlide() {
+    if (slides.length === 0) return;
+
+    slides.forEach(s => s.classList.remove("active"));
+    slides[index].classList.add("active");
+
+    index = (index + 1) % slides.length;
+  }
+
+  showSlide();
+  setInterval(showSlide, 3000);
+
 });
-}
+
+document.getElementById("year").innerText =
+  "© " + new Date().getFullYear() + " Parigyan Yogalaya. All rights reserved.";

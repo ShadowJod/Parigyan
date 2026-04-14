@@ -546,7 +546,7 @@ body {
   background: #111;
   color: #fff;
   text-align: center;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 1px solid #555;
 }
 
 .cta-container {
